@@ -29,9 +29,9 @@ app.use(express.static("public"));
 mongoose.connect("mongodb://localhost/mongoosearticles");
 
 if (process.env.MONGODB_URI){
-  mongose.connect(process.env.MONGODB_UR);
+  mongoose.connect(process.env.MONGODB_UR);
 }else{
-  mongose.connect(databaseUri);
+  mongoose.connect(databaseUri);
 }
 
 var db = mongoose.connection;
