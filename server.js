@@ -26,7 +26,9 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-var databaseUri = "mongodb://localhost/mongoosearticles";
+var databaseUri = "
+mongodb://<dbuser>:<dbpassword>@ds147681.mlab.com:47681/heroku_q3h5mll9
+";
 if (process.env.MONGODB_URI){
     mongoose.connect(process.env.MONGODB_URI);
 } else {
